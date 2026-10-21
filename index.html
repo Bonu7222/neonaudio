@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Audio Visualizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="visualizer"></canvas>
+
+    <div class="ui-container">
+        <div class="glass-player">
+
+            <div class="top-row">
+                <div class="track-info">
+                    <h2 id="track title">SOUNDHELIX</h2>
+                    <p id="track-artist">Cyberpunk Vibes</p>
+                </div>
+                <button id="mic-btn" class="mic-btn">🎤 Use Mic</button>
+            </div>
+
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <input type="range" id="seek-bar" value="0" max="100" step="0.1">
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="controls-row">
+                <div class="left-controls">
+                    <div class="volume-container">
+                        <span>🔊</span>
+                        <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="0.5">
+                    </div>
+                </div>
+
+                <button id="play-btn" class="play-btn">▶</button>
+
+
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="bars">BARS</button>
+                    <button class="mode-btn" data-mode="wave">WAVE</button>
+                    <button class="mode-btn" data-mode="radial">RADIAL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
